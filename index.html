@@ -14,7 +14,7 @@
     .hover {
       stroke: #000;
       stroke-width: 0.5px;
-      /*cursor: pointer;*/
+      cursor: pointer;
     }
 
     p {
@@ -43,6 +43,7 @@
         -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
         box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
         pointer-events: none;
+        opacity: 0.8;
     }
 
     .hidden {
@@ -60,17 +61,18 @@
 <head>
     <script src="https://d3js.org/d3.v4.js"></script>
     <script type="text/javascript" src="http://livejs.com/live.js"></script>
+    <script type="text/javascript" src="occupation.js"></script>
 </head>
 
 <body>
     <div class="chart">
       <div id="tooltip" class="hidden">
-        <p><strong>year: </strong><span id="year"></span></p>
-        <p><strong>category: </strong><span id="category"></span></p>
-        <p><strong>count: </strong><span id="count"></span></p>
-        <p><strong>population: </strong><span id="population"></span></p>
-        <p class="hidden"><span id="job"></span></p>
-        <p class="hidden"><span id="count_job"></span></p>
+        <p id="year"><strong>Year: </strong><span></span></p>
+        <p id="category"><strong>Category: </strong><span></span></p>
+        <p id="count"><strong>Category count: </strong><span></span></p>
+        <p id="population"><strong>Population: </strong><span></span></p>
+        <p id="job" class="hidden"><strong>Job: </strong><span></span></p>
+        <p id="count_job" class="hidden"><strong>Job count: </strong><span></span></p>
       </div>
     </div>
 
